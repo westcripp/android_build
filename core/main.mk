@@ -141,31 +141,31 @@ $(warning ************************************************************)
 $(error Directory names containing spaces not supported)
 endif
 
-# Check for the corrent jdk
+# Check for the correct jdk
+is_java7 := $(shell java -version 2>&1 | head -n 1 | grep '^java .*[ "]1\.7[\. "$$]')
+ifeq ($(strip $(is_java7)),)
 ifneq ($(shell java -version 2>&1 | grep -i openjdk),)
 $(info ************************************************************)
 $(info You are attempting to build with an unsupported JDK.)
 $(info $(space))
-$(info You use OpenJDK but only Sun/Oracle JDK is supported.)
+$(info You use OpenJDK but only Sun/Oracle JDK is supported for Java < 1.7.)
 $(info Please follow the machine setup instructions at)
 $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
 $(info $(space))
 $(info Continue at your own peril!)
 $(info ************************************************************)
 endif
+endif
 
 # Check for the correct version of java
 java_version := $(shell java -version 2>&1 | head -n 1 | grep '^java .*[ "]1\.[67][\. "$$]')
-ifneq ($(shell java -version 2>&1 | grep -i openjdk),)
-java_version :=
-endif
 ifeq ($(strip $(java_version)),)
 $(info ************************************************************)
 $(info You are attempting to build with an unsupported version)
 $(info of java.)
 $(info $(space))
 $(info Your version is: $(shell java -version 2>&1 | head -n 1).)
-$(info The correct version is: Java SE 1.6 or 1.7.)
+$(info The correct version is: Java 1.6 or 1.7.)
 $(info $(space))
 $(info Please follow the machine setup instructions at)
 $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
@@ -956,3 +956,4 @@ showcommands:
 .PHONY: nothing
 nothing:
 	@echo Successfully read the makefiles.
+
