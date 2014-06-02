@@ -1448,9 +1448,9 @@ else
 endif
 
 ifeq ($(TARGET_UNIFIED_DEVICE),)
-    $(INTERNAL_OTA_PACKAGE_TARGET): override_prop := false
+    $(INTERNAL_OTA_PACKAGE_TARGET): override_prop := --override_prop=false
 else
-    $(INTERNAL_OTA_PACKAGE_TARGET): override_prop := true
+    $(INTERNAL_OTA_PACKAGE_TARGET): override_prop := --override_prop=true
 endif
 
 ifneq ($(TARGET_NO_SEPARATE_RECOVERY),)
