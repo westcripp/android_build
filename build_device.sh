@@ -67,6 +67,14 @@ echo To cancel, Press CTRL + C
     sleep 10
     exit
 else
-        echo To build, cd to the RR directory and run the following command
+clear
+        echo To build next time, cd to the RR directory
+        echo and type the following command:
         echo brunch $device
+        echo Or Alternatively, Run this Wizard again by typing;
+        echo ./build_device.sh
+                echo Exiting the Resurrection Remix Build Wizard in 10 seconds!
+                echo To cancel, Press CTRL + C
+                sleep 10
+    exit
 fi
