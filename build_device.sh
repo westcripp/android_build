@@ -1,9 +1,13 @@
 #!/bin/bash
 clear
 echo Welcome to the Resurrection Remix Build Wizard!
+echo This Wizard will be helping you to build ROMs for your device from Resurrection Remix
+echo Do note that for EVERYTHING you type, you are required to type in LOWER CASE
+echo If they are not, you may expereince some errors along the way
+sleep 10
 echo Please hold while we set up the Build Environment...
 . build/envsetup.sh
-sleep 1
+sleep 2
 clear
 echo Before we begin, what Device manafacturer do you want to build for?
 echo A device manafacturer is similar to sony, htc, samsung and etc
