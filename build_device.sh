@@ -47,9 +47,9 @@ clear
     repo sync -j6
 clear
 echo Device Specific Source has been Downloaded and Ready to be utilized!
-echo Do you want to build Resurrection Remix for $device now? Type 1 or 0 (1 means Yes/0 meansNo)
+echo Do you want to build Resurrection Remix for $device now? Type 1 or 0 
 read ch
-if [ $ch -eq 0 ] ; then
+if [ $ch -eq 1 ] ; then
         echo Building for $device in 5 seconds...
         sleep 1
         echo Building for $device in 4 seconds...
