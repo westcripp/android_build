@@ -41,7 +41,7 @@ echo Downloading Device Source for $device in 2...
 sleep 1
 echo Downloading Device Source for $device in 1...
 sleep 1
-    brunch $device
+    breakfast $device
 clear
     repo sync -j6
 clear
