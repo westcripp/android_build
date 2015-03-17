@@ -6,6 +6,7 @@ echo Do note that for EVERYTHING you type, you are required to type in LOWER CAS
 echo If they are not, you may expereince some errors along the way
 sleep 10
 echo Please hold while we set up the Build Environment...
+sleep 3
 . build/envsetup.sh
 sleep 2
 clear
