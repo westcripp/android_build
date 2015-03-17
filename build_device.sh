@@ -70,11 +70,16 @@ else
 clear
         echo To build next time, cd to the RR directory
         echo and type the following command:
+        echo                    
         echo brunch $device
+        echo                     
         echo Or Alternatively, Run this Wizard again by typing;
         echo ./build_device.sh
+sleep 3
+    echo     
+    echo     
                 echo Exiting the Resurrection Remix Build Wizard in 10 seconds!
-                echo To cancel, Press CTRL + C
+                echo To exit immediately, Press CTRL + C
                 sleep 10
     exit
 fi
