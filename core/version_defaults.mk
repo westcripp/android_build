@@ -41,7 +41,7 @@ ifeq "" "$(PLATFORM_VERSION)"
   # which is the version that we reveal to the end user.
   # Update this value when the platform version changes (rather
   # than overriding it somewhere else).  Can be an arbitrary string.
-  PLATFORM_VERSION := 4.4.2
+  PLATFORM_VERSION := Android Lollipop 5.1
 endif
 
 ifeq "" "$(PLATFORM_SDK_VERSION)"
@@ -53,7 +53,7 @@ ifeq "" "$(PLATFORM_SDK_VERSION)"
   # intermediate builds).  During development, this number remains at the
   # SDK version the branch is based on and PLATFORM_VERSION_CODENAME holds
   # the code-name of the new development work.
-  PLATFORM_SDK_VERSION := 19
+  PLATFORM_SDK_VERSION := 22
 endif
 
 ifeq "" "$(PLATFORM_VERSION_CODENAME)"
@@ -94,5 +94,5 @@ ifeq "" "$(BUILD_NUMBER)"
   # If no BUILD_NUMBER is set, create a useful "I am an engineering build
   # from this date/time" value.  Make it start with a non-digit so that
   # anyone trying to parse it as an integer will probably get "0".
-  BUILD_NUMBER := eng.$(USER).$(shell date +%Y%m%d.%H%M%S)
+  BUILD_NUMBER := RR_eng.$(USER).$(shell date +%Y%m%d.%H%M%S)
 endif
